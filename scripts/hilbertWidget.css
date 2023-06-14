@@ -1,0 +1,81 @@
+/* Styling for Hilbert widget */
+
+div#hilbertWidget {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Widget Title */
+div#hilbertWidget #title #titleText {
+  font: bold 20pt 'Times New Roman', serif;
+}
+
+/* tooltip */
+div#hilbertWidget #title #tooltip {
+  font-size: 18pt;
+  vertical-align: super;
+}
+
+/* The Drawing Canvas */
+div#hilbertWidget canvas {
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+/* GUI Controls */
+div#hilbertWidget #controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+/* Order GUI control for setting the Hilbert curve order */
+div#hilbertWidget #controls #orderLabel {
+  font-size: 133%;
+  margin: 6px;
+}
+
+div#hilbertWidget #controls #order {
+  font-size: large;
+  margin: 6px;
+}
+
+/* Size GUI control for setting the canvas size */
+div#hilbertWidget #controls #size {
+  border: solid black;
+  transform: scale(1.5);
+  margin: 6px 6px 6px 12px;
+}
+
+div#hilbertWidget #controls #sizeLabel {
+  font-size: 140%;
+  margin: 6px;
+}
+
+div#hilbertWidget #speedLabel {
+  font-size: 140%;
+  margin: 1px 2px 8px 0px;
+}
+
+div#hilbertWidget #speed {
+  margin: 1px 0px 8px 2px;
+}
+
+/* Start button */
+div#hilbertWidget button {
+  width: 120px;
+  background-color: #09f;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+}
+
+div#hilbertWidget button:hover {
+  background-color: #07d;
+}

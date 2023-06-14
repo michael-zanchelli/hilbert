@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Web page that hosts the Hilbert widget -->
+<!-- TO DO:
+  - js module
+  - X serpinsky curve
+  - game of life
+  - fractals
+  - candle flame background
+  - React & Node.js
+-->
+
+<HTML lang="en">
+
+<HEAD>
+  <TITLE>Hilbert widget page</TITLE>
+  <META charset="utf-8">
+  <META name="keywords" value="hilbert">
+  <META name="description" value="Generate and display (pseudo) Hilbert Curves">
+  <meta name="author" content="Michael Zanchelli">
+  <META name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <LINK href="scripts/hilbertWidget.css" rel="stylesheet" type="text/css">
+  <script src="scripts/hilbert.js"></script>
+  <script src="scripts/hilbertWidget.js"></script>
+</HEAD>
+
+<BODY>
+  <SECTION>
+    <div id="hilbertWidget">
+      <div id="title">
+        <span id="titleText">Hilbert Curve</span>
+        <span id="tooltip"><a style="text-decoration:none" href="https://en.wikipedia.org/wiki/Hilbert_curve" target="_blank"> &#x1F6C8; </a></span>
+      </div>
+      <canvas id="canvas"></canvas>
+      <span id="controls">
+        <label for="order" id="orderLabel">Hilbert Order: <select id="order" name="order">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option selected>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+        </label>
+        <span style="font-size:20pt"> &vert; </span>
+        <input type="checkbox" id="size" name="size"><label for="size" id="sizeLabel"> Large</label>
+      </span>
+      <label for="speed" id="speedLabel">Speed: <input type="range" id="speed" name="speed" list="tickmarks" min="0" max="2" />
+      </label>
+      <datalist id="tickmarks">
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+      </datalist>
+      <button type="button">Draw</button>
+    </div>
+  </SECTION>
+</BODY>
+
+</HTML>
